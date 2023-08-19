@@ -1,0 +1,104 @@
+strict digraph coin_change {
+node1 [label = "CC(11,3)", color = "blue", style = "bold"]
+node1 -> node2
+node2 [label = "CC(11,2)", color = "magenta", style = "bold"]
+node2 -> node4
+node4 [label = "CC(11,1)", color = "black", style = "solid"]
+node4 -> node8
+node8 [label = "CC(11,0)", color = "red", style = "bold"]
+node4 -> node9
+node9 [label = "CC(10,1)", color = "black", style = "solid"]
+node9 -> node18
+node18 [label = "CC(10,0)", color = "red", style = "bold"]
+node9 -> node19
+node19 [label = "CC(9,1)", color = "black", style = "solid"]
+node19 -> node38
+node38 [label = "CC(9,0)", color = "red", style = "bold"]
+node19 -> node39
+node39 [label = "CC(8,1)", color = "black", style = "solid"]
+node39 -> node78
+node78 [label = "CC(8,0)", color = "red", style = "bold"]
+node39 -> node79
+node79 [label = "CC(7,1)", color = "black", style = "solid"]
+node79 -> node158
+node158 [label = "CC(7,0)", color = "red", style = "bold"]
+node79 -> node159
+node159 [label = "CC(6,1)", color = "black", style = "solid"]
+node159 -> node318
+node318 [label = "CC(6,0)", color = "red", style = "bold"]
+node159 -> node319
+node319 [label = "CC(5,1)", color = "black", style = "solid"]
+node319 -> node638
+node638 [label = "CC(5,0)", color = "red", style = "bold"]
+node319 -> node639
+node639 [label = "CC(4,1)", color = "black", style = "solid"]
+node639 -> node1278
+node1278 [label = "CC(4,0)", color = "red", style = "bold"]
+node639 -> node1279
+node1279 [label = "CC(3,1)", color = "black", style = "solid"]
+node1279 -> node2558
+node2558 [label = "CC(3,0)", color = "red", style = "bold"]
+node1279 -> node2559
+node2559 [label = "CC(2,1)", color = "black", style = "solid"]
+node2559 -> node5118
+node5118 [label = "CC(2,0)", color = "red", style = "bold"]
+node2559 -> node5119
+node5119 [label = "CC(1,1)", color = "black", style = "solid"]
+node5119 -> node10238
+node10238 [label = "CC(1,0)", color = "red", style = "bold"]
+node5119 -> node10239
+node10239 [label = "CC(0,1)", color = "green", style = "bold"]
+node2 -> node5
+node5 [label = "CC(6,2)", color = "magenta", style = "bold"]
+node5 -> node10
+node10 [label = "CC(6,1)", color = "black", style = "solid"]
+node10 -> node20
+node20 [label = "CC(6,0)", color = "red", style = "bold"]
+node10 -> node21
+node21 [label = "CC(5,1)", color = "black", style = "solid"]
+node21 -> node42
+node42 [label = "CC(5,0)", color = "red", style = "bold"]
+node21 -> node43
+node43 [label = "CC(4,1)", color = "black", style = "solid"]
+node43 -> node86
+node86 [label = "CC(4,0)", color = "red", style = "bold"]
+node43 -> node87
+node87 [label = "CC(3,1)", color = "black", style = "solid"]
+node87 -> node174
+node174 [label = "CC(3,0)", color = "red", style = "bold"]
+node87 -> node175
+node175 [label = "CC(2,1)", color = "black", style = "solid"]
+node175 -> node350
+node350 [label = "CC(2,0)", color = "red", style = "bold"]
+node175 -> node351
+node351 [label = "CC(1,1)", color = "black", style = "solid"]
+node351 -> node702
+node702 [label = "CC(1,0)", color = "red", style = "bold"]
+node351 -> node703
+node703 [label = "CC(0,1)", color = "green", style = "bold"]
+node5 -> node11
+node11 [label = "CC(1,2)", color = "magenta", style = "bold"]
+node11 -> node22
+node22 [label = "CC(1,1)", color = "black", style = "solid"]
+node22 -> node44
+node44 [label = "CC(1,0)", color = "red", style = "bold"]
+node22 -> node45
+node45 [label = "CC(0,1)", color = "green", style = "bold"]
+node11 -> node23
+node23 [label = "CC(-4,2)", color = "red", style = "bold"]
+node1 -> node3
+node3 [label = "CC(1,3)", color = "blue", style = "bold"]
+node3 -> node6
+node6 [label = "CC(1,2)", color = "magenta", style = "bold"]
+node6 -> node12
+node12 [label = "CC(1,1)", color = "black", style = "solid"]
+node12 -> node24
+node24 [label = "CC(1,0)", color = "red", style = "bold"]
+node12 -> node25
+node25 [label = "CC(0,1)", color = "green", style = "bold"]
+node6 -> node13
+node13 [label = "CC(-4,2)", color = "red", style = "bold"]
+node3 -> node7
+node7 [label = "CC(-9,3)", color = "red", style = "bold"]
+}
+// node_count = 51
