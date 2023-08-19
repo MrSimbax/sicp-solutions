@@ -7,8 +7,8 @@
 (define (fast-mult a b)
     (define (fast-mult-iter a b acc)
         (cond ((= b 0) acc)
-            ((even? b) (fast-mult (double a) (halve b) acc))
-            (else (fast-mult a (- b 1) (+ acc a)))))
+            ((even? b) (fast-mult-iter (double a) (halve b) acc))
+            (else (fast-mult-iter a (- b 1) (+ acc a)))))
     (fast-mult-iter a b 0))
 
 (fast-mult 0 0) ; 0
