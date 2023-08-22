@@ -1,0 +1,54 @@
+strict digraph tree
+{
+graph [center=true]
+node [shape=circle]
+
+n2_1 [label = "n/2"]
+n2_2 [label = "n/2"]
+"n" -> {n2_1, n2_2}
+
+n4_1 [label = "n/4"]
+n4_2 [label = "n/4"]
+n4_3 [label = "n/4"]
+n4_4 [label = "n/4"]
+n2_1 -> {n4_1, n4_2}
+n2_2 -> {n4_3, n4_4}
+
+dots_1 [label = "..."]
+dots_2 [label = "..."]
+dots_3 [label = "..."]
+dots_4 [label = "..."]
+dots_5 [label = "..."]
+dots_6 [label = "..."]
+dots_7 [label = "..."]
+dots_8 [label = "..."]
+n4_1 -> {dots_1, dots_2}
+n4_2 -> {dots_3, dots_4}
+n4_3 -> {dots_5, dots_6}
+n4_4 -> {dots_7, dots_8}
+
+n1_1 [label = 1]
+n1_2 [label = 1]
+n1_3 [label = 1]
+n1_4 [label = 1]
+n1_5 [label = 1]
+n1_6 [label = 1]
+n1_7 [label = 1]
+n1_8 [label = 1]
+n1_9 [label = 1]
+n1_10 [label = 1]
+n1_11 [label = 1]
+n1_12 [label = 1]
+n1_13 [label = 1]
+n1_14 [label = 1]
+n1_15 [label = 1]
+n1_16 [label = 1]
+dots_1 -> {n1_1, n1_2}
+dots_2 -> {n1_3, n1_4}
+dots_3 -> {n1_5, n1_6}
+dots_4 -> {n1_7, n1_8}
+dots_5 -> {n1_9, n1_10}
+dots_6 -> {n1_11, n1_12}
+dots_7 -> {n1_13, n1_14}
+dots_8 -> {n1_15, n1_16}
+}
