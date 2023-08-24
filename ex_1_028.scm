@@ -4,11 +4,12 @@
 
 (define (expmod base exp m)
     (define (check-square x)
-        (if (and (> x 1) (< (- m 1) x) (= (remainder (square x) m) 1))
+        (define sq (remainder (square x) m))
+        (if (and (> x 1) (< (- m 1) x) (= sq m) 1)
             0
-            (square x)))
+            sq))
     (cond ((= exp 0)   1)
-          ((even? exp) (remainder (check-square (expmod base (/ exp 2) m)) m))
+          ((even? exp) (check-square (expmod base (/ exp 2) m)))
           (else        (remainder (* base (expmod base (- exp 1) m)) m))))
 
 (define (fast-prime? n times)
@@ -20,19 +21,31 @@
         (= (expmod a (- n 1) n) 1))
     (try-it (+ 1 (random (- n 1)))))
 
-(fast-prime? 561 100) ; #f
-(fast-prime? 1105 100) ; #f
-(fast-prime? 1729 100) ; #f
-(fast-prime? 2465 100) ; #f
-(fast-prime? 2821 100) ; #f
-(fast-prime? 6601 100) ; #f
+(define (test input answer)
+    (display input)
+    (display " -> ")
+    (define output (fast-prime? input 100))
+    (display output)
+    (display " (")
+    (if (equal? output answer)
+        (display "passed")
+        (display "failed"))
+    (display ")")
+    (newline))
 
-(fast-prime? 2 100) ; #t 
-(fast-prime? 3 100) ; #t 
-(fast-prime? 4 100) ; #f
-(fast-prime? 5 100) ; #t
-(fast-prime? 6 100) ; #f
-(fast-prime? 7 100) ; #t
-(fast-prime? 8 100) ; #f
-(fast-prime? 9 100) ; #f
+(test 561 #f)
+(test 1105 #f)
+(test 1729 #f)
+(test 2465 #f)
+(test 2821 #f)
+(test 6601 #f)
+
+(test 2 #t)
+(test 3 #t)
+(test 4 #f)
+(test 5 #t)
+(test 6 #f)
+(test 7 #t)
+(test 8 #f)
+(test 9 #f)
 
