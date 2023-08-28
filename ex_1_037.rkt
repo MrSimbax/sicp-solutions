@@ -11,7 +11,7 @@
     (define (f i result)
         (if (= i 0)
             result
-            (f (- i 1) (/ (n k) (+ (d k) result)))))
+            (f (- i 1) (/ (n i) (+ (d i) result)))))
     (f k 0))
 
 (/ 1 (cont-frac-iter (lambda (_) 1.0) (lambda (_) 1.0) 11))
